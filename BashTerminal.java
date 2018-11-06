@@ -1,3 +1,14 @@
+/**
+ * The <code>BashTerminal</code> class contains a single main method which allows a user to interact with a 
+ * file system implemented by an instance of <code>DirectoryTree</code> using the following commands: pwd, ls,
+ * ls -R, cd {dir}, cd /, mkdir {name}, touch{name}, exit.
+ *
+ *
+ * @author Piotr Milewski
+ *    email: piotr.milewski@stonybrook.edu
+ *    Stony Brook ID: 112291666
+ **/
+
 import java.io.*;
 
 public class BashTerminal{

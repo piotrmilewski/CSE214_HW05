@@ -1,3 +1,15 @@
+/**
+ * The <code>DirectoryTree</code> class implement a ternary tree of <code>DirectoryNode</code>s. It provides
+ * an implementation for the operations defined for the system.
+ *
+ *
+ * @author Piotr Milewski
+ *    email: piotr.milewski@stonybrook.edu
+ *    Stony Brook ID: 112291666
+ **/
+
+import java.io.*;
+
 public class DirectoryTree{
 
     DirectoryNode root;

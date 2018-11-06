@@ -1,3 +1,15 @@
+/**
+ * The <code>DirectoryNode</code> class represents a node in the file tree. It contains left, middle, and right
+ * DirectoryNode references in addition to the name of the node it represents in the tree.
+ *
+ *
+ * @author Piotr Milewski
+ *    email: piotr.milewski@stonybrook.edu
+ *    Stony Brook ID: 112291666
+ **/
+
+import java.io.*;
+
 public class DirectoryNode{
 
     String name;
