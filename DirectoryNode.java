@@ -4,6 +4,7 @@ public class DirectoryNode{
     DirectoryNode left;
     DirectoryNode middle;
     DirectoryNode right;
+    DirectoryNode parent;
     boolean isFile;
 
     public DirectoryNode(){
@@ -11,6 +12,7 @@ public class DirectoryNode{
 	left = null;
 	middle = null;
 	right = null;
+	parent = null;
 	isFile = true;
     }
 
@@ -19,14 +21,16 @@ public class DirectoryNode{
 	left = null;
 	middle = null;
 	right = null;
+	parent = null;
 	isFile = newIsFile;
     }
 
-    public DirectoryNode( String newName, boolean newIsFile){
+    public DirectoryNode( String newName, DirectoryNode newParent, boolean newIsFile){
 	name = newName;
 	left = null;
 	middle = null;
 	right = null;
+	parent = newParent;
 	isFile = newIsFile;
     }
 
@@ -50,10 +54,18 @@ public class DirectoryNode{
 	return right;
     }
 
+    public DirectoryNode getParent(){
+	return parent;
+    }
+
+    public boolean isFile(){
+	return isFile;
+    }
+
     public void addChild(DirectoryNode newChild) throws FullDirectoryException, NotADirectoryException{
 	//if current node is a file
 	if (isFile)
-	    throw NotADirectoryException;
+	    throw new NotADirectoryException();
 	//attempt to add child to the current node, from left to right
 	if (left == null)
 	    left = newChild;
@@ -62,8 +74,13 @@ public class DirectoryNode{
 	else if (right == null)
 	    right = newChild;
 	//if all child references of this directory are occupied
-	else
-	    throw FullDirectoryException;
+	else{
+	    try{
+		throw new FullDirectoryException();
+	    }
+	    catch (FullDirectoryException fde){
+		System.out.println(fde);
+	    }
+	}
     }
-
 }
