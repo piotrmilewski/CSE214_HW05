@@ -2,7 +2,7 @@ public class NotADirectoryException extends Exception{
 
     public NotADirectoryException(){
 	//default message
-	super("This is not a directory");
+	super("No such directory exists.");
     }
 
     public NotADirectoryException(String message){

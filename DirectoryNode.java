@@ -64,8 +64,14 @@ public class DirectoryNode{
 
     public void addChild(DirectoryNode newChild) throws FullDirectoryException, NotADirectoryException{
 	//if current node is a file
-	if (isFile)
-	    throw new NotADirectoryException();
+	if (isFile){
+	    try{
+		throw new NotADirectoryException();
+	    }
+	    catch (NotADirectoryException nade){
+		System.out.println(nade);
+	    }
+	}
 	//attempt to add child to the current node, from left to right
 	if (left == null)
 	    left = newChild;

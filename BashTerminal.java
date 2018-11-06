@@ -7,6 +7,9 @@ public class BashTerminal{
 	InputStreamReader inStream = new InputStreamReader(System.in);
 	BufferedReader stdin = new BufferedReader(inStream);
 
+	//ensure DirectoryNode compiles
+	DirectoryNode node = new DirectoryNode();
+	
 	DirectoryTree terminal = new DirectoryTree();
 	
 	boolean runTerminal = true;
@@ -48,7 +51,7 @@ public class BashTerminal{
 		runTerminal = false;
 	    }
 	    else{
-		System.out.println("lol what");
+		System.out.println("This command does not exist.");
 	    }
 	}
     }
